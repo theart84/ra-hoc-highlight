@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import Video from "../Video/Video";
 import Article from "../Article/Article";
-import withChangeStatusComponent from "../withChangeStatusComponent/withChangeStatusComponent";
+import withHighLightPost from "../withHighLightPost/withHighLightPost";
 
 function List({list}) {
   return list.map(item => {
@@ -23,8 +23,8 @@ function List({list}) {
   });
 }
 
-const VideoHOC = withChangeStatusComponent(Video);
-const ArticleHOC = withChangeStatusComponent(Article);
+const VideoHOC = withHighLightPost(Video);
+const ArticleHOC = withHighLightPost(Article);
 
 List.propTypes = {
   list: PropTypes.array.isRequired

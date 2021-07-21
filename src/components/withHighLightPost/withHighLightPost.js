@@ -1,7 +1,7 @@
 import Popular from "../Popular/Popular";
 import New from "../New/New";
 
-const withChangeStatusComponent = (Component) => {
+const withHighLightPost = (Component) => {
   return (props) => {
     if (props.views < 100) {
       return <New><Component {...props} /></New>
@@ -13,4 +13,4 @@ const withChangeStatusComponent = (Component) => {
   }
 }
 
-export default withChangeStatusComponent;
+export default withHighLightPost;
